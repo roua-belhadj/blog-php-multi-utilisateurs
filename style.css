@@ -1,0 +1,99 @@
+/* style.css */
+
+:root {
+    --primary: #7c3aed;       /* Violet vif */
+    --bg-color: #f3e8ff;      /* Violet très clair pour le fond */
+    --dark: #2e1065;          /* Violet très foncé pour le texte */
+}
+
+body {
+    background-color: var(--bg-color);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: var(--dark);
+    margin: 0;
+    padding: 0;
+    /* On s'assure que le body prend toute la hauteur pour le centrage */
+    min-height: 100vh;
+}
+
+header {
+    background: white;
+    padding: 15px 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    box-shadow: 0 2px 10px rgba(124, 58, 237, 0.1);
+}
+
+/* --- MODIFICATIONS POUR LE CENTRAGE ET LA TAILLE --- */
+
+.container {
+    width: 95%;
+    max-width: 900px; /* Agrandissement de la zone principale */
+    margin: 40px auto;
+    /* Utilisation de Flexbox pour centrer le contenu à l'intérieur */
+    display: flex;
+    flex-direction: column;
+    align-items: center; 
+    justify-content: center;
+}
+
+/* Style spécifique pour la carte de connexion/inscription (le .card utilisé dans tes fichiers) */
+.card {
+    background: white;
+    width: 100%;
+    max-width: 550px; /* On agrandit la carte (était à 400px dans ton HTML) */
+    border-radius: 20px;
+    padding: 20px;
+    box-shadow: 0 15px 35px rgba(124, 58, 237, 0.15); /* Ombre plus douce et violette */
+    margin: auto; /* Centrage automatique */
+}
+
+/* Pour la grille d'articles sur l'index, on garde une structure plus large */
+.grid-articles {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(350px, 1fr)); /* Cartes d'articles plus grandes */
+    gap: 30px;
+    width: 100%;
+}
+
+/* --- RESTE DU DESIGN --- */
+
+.card-body {
+    padding: 30px; /* Plus d'espace interne pour l'agrandissement */
+}
+
+.btn {
+    background: var(--primary);
+    color: white;
+    padding: 15px 25px; /* Bouton plus imposant */
+    border: none;
+    border-radius: 10px;
+    text-decoration: none;
+    display: inline-block;
+    cursor: pointer;
+    font-weight: 600;
+    transition: background 0.3s;
+}
+
+.btn:hover {
+    background: #6d28d9;
+}
+
+input, textarea {
+    width: 100%;
+    padding: 14px;
+    margin-top: 8px;
+    margin-bottom: 15px;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    box-sizing: border-box;
+    font-size: 1rem;
+}
+
+.logo {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: var(--primary);
+    text-decoration: none;
+}
